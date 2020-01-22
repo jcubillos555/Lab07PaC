@@ -4,26 +4,26 @@
   gather_facts: no
 
   vars:
-      rgr: lab07
-      vmnameansible: ansiblelab07
-      vmnamelab07: weblab07
-      vmname2lab07: web2lab07
-      vmnamebdlab07: bdlab07
-      dnsansiblelab07: ansiblelab07
-      dnsweblab07: weblab07
-      dnsweb2lab07: web2lab07
-      dnsbdlab07: bdlab07
+      rgr: lab08
+      vmnameansible: ansiblelab078
+      vmnamelab07: weblab078
+      vmname2lab07: web2lab078
+      vmnamebdlab07: bdlab078
+      dnsansiblelab07: ansiblelab08
+      dnsweblab07: weblab08
+      dnsweb2lab07: web2lab08
+      dnsbdlab07: bdlab08
       userlab07: jcubillos555
       sizevmlab07: Standard_B1ms
       offerlab07: UbuntuServer
       publisherlab0: Canonical
       skulab07: 18.04-LTS
-      tagansiblelab07: ansiblelab07
-      tagweblab07: weblab07
-      tagbdlab07: bdlab07
-      virtualnetworklab07: MyVNlab07
-      subnetlab07: MySubnetlab07
-      nsglab07: MyNSGlab07
+      tagansiblelab07: ansiblelab08
+      tagweblab07: weblab08
+      tagbdlab07: bdlab08
+      virtualnetworklab07: MyVNlab08
+      subnetlab07: MySubnetlab08
+      nsglab07: MyNSGlab08
       locationlab07: westus
       autenthicationmethod: sshPublicKey
       llavepublicalab07: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOcUiCw6qYodwRT6FcabSr6BF+UJQ5WCvOz4v9wulxV2Z9aDmKBMTKM0537n2umdY3++gMLjOEEuG4RYhuH1rX5mdDQvm5FP+bkfrXBUHTntJk1C91/FOvL6LpLoqKf5eZ01hFPzm2F+SdGdRXTWhDLOfyGF/kQNwpE+wrPRCdfpRU0FORA/q49OvfugorYXcYvMnvByftDzZVxiBQ+3c7bQR13ZhizM7pPAgGmBivpPT27XPkBViSFDVAR7CD6KD1r1BalyEgRNadWNp/BBFo9dAZwWd6tBwPC6ONgoF5qyvbot6rNZ+mprldb4DL4ZGpT8YFpoV2c+aPI8jnreCj jcubillos555@ansiblelab07
