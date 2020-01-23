@@ -4,14 +4,14 @@
   gather_facts: no
 
   vars:
-      rgr: lab08
-      vmnameansible: ansiblelab078
-      vmnamelab07: weblab078
-      vmname2lab07: web2lab078
-      vmnamebdlab07: bdlab078
-      dnsansiblelab07: ansiblelab08
-      dnsweblab07: weblab08
-      dnsweb2lab07: web2lab08
+      rgr: __rgr__
+      vmnameansible: __vmnameansible__
+      vmnamelab07: __vmnamelab07__
+      vmname2lab07: __vmname2lab07__
+      vmnamebdlab07: __vmnamebdlab07__
+      dnsansiblelab07: __dnsansiblelab07__
+      dnsweblab07: __dnsweblab07__
+      dnsweb2lab07: __dnsweb2lab07__
       dnsbdlab07: bdlab08
       userlab07: jcubillos555
       sizevmlab07: Standard_B1ms
@@ -36,7 +36,7 @@
   - name: Deploy VM Ansible
     azure_rm_deployment:
       resource_group: "{{ rgr }}"
-      name: Deploylab07
+      name: Deploylab08
       parameters:
         vmName:
           value: "{{ vmnameansible }}"
@@ -106,7 +106,7 @@
   - name: Deploy VM Azure Apache1
     azure_rm_deployment:
       resource_group: "{{ rgr }}"
-      name: Deploylab07
+      name: Deploylab08
       parameters:
         vmName:
           value: "{{ vmnamelab07 }}"
@@ -144,7 +144,7 @@
   - name: Deploy VM Azure Apache2 Prueba Inventario Dinamico
     azure_rm_deployment:
       resource_group: "{{ rgr }}"
-      name: Deploylab07
+      name: Deploylab08
       parameters:
         vmName:
           value: "{{ vmname2lab07 }}"
@@ -182,7 +182,7 @@
   - name: Deploy VM Azure Mysql
     azure_rm_deployment:
       resource_group: "{{ rgr }}"
-      name: Deploylab07
+      name: Deploylab08
       parameters:
         vmName:
           value: "{{ vmnamebdlab07 }}"
