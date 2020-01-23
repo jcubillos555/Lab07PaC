@@ -42,3 +42,19 @@ stages:
   - job: InstallConfigbd
     displayName: InstallConfigbd
     steps:
+    - task: CopyFilesOverSSH@0
+      inputs:
+        sshEndpoint: 'ansiblelab08'
+        sourceFolder: 'Data'
+        contents: 'users.sql'
+        targetFolder: '/tmp'
+    - task: Ansible@0
+      inputs:
+        ansibleInterface: 'remoteMachine'
+        connectionOverSsh: 'ansiblelab08'
+        playbookSourceRemoteMachine: 'agentMachine'
+        playbookRootRemoteMachine: 'InfraAnsible'
+        playbookPathLinkedArtifactOnRemoteMachine: 'mainbd.yml'
+        inventoriesRemoteMachine: 'file'
+        inventoryFileSourceRemoteMachine: 'agentMachine'
+        inventoryFileLinkedArtifactOnRemoteMachine: 'inventariowebazure_rm.yml'
