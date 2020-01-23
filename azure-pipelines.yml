@@ -33,4 +33,5 @@ stages:
           playbookSourceRemoteMachine: 'agentMachine'
           playbookRootRemoteMachine: 'InfraAnsible'
           playbookPathLinkedArtifactOnRemoteMachine: 'infra.yml'
-          inventoriesRemoteMachine: 'noInventory'
+          inventoriesRemoteMachine: 'hostList'
+          inventoryHostListRemoteMachine: 'ansiblelab08.westus.cloudapp.azure.com'
