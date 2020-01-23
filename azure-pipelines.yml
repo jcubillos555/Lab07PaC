@@ -52,12 +52,13 @@ stages:
       inputs:
         ansibleInterface: 'remoteMachine'
         connectionOverSsh: 'ansiblelab08'
-        playbookSourceRemoteMachine: 'ansibleMachine'
-        playbookPathAnsibleMachineOnRemoteMachine: '/home/jcubilllos555/main3.yml'
+        playbookSourceRemoteMachine: 'agentMachine'
+        playbookRootRemoteMachine: 'InfraAnsible'
+        playbookPathLinkedArtifactOnRemoteMachine: 'mainbd.yml'
         inventoriesRemoteMachine: 'file'
         inventoryFileSourceRemoteMachine: 'agentMachine'
         inventoryFileLinkedArtifactOnRemoteMachine: 'InfraAnsible/inventariowebazure_rm.yml'
-        args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_weblab08'
+        args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_bdlab08'
 - stage: RoleApache
   displayName: Role Apache
   jobs:
