@@ -35,3 +35,10 @@ stages:
           playbookPathLinkedArtifactOnRemoteMachine: 'infra.yml'
           inventoriesRemoteMachine: 'hostList'
           inventoryHostListRemoteMachine: 'ansiblelab08.westus.cloudapp.azure.com'
+
+- stage: Role Mysql
+  displayName: Role Mysql
+  jobs:
+  - job: InstallConfigbd
+    displayName: InstallConfigbd
+    steps:
