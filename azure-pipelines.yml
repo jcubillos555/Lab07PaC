@@ -58,3 +58,4 @@ stages:
         inventoriesRemoteMachine: 'file'
         inventoryFileSourceRemoteMachine: 'agentMachine'
         inventoryFileLinkedArtifactOnRemoteMachine: 'inventariowebazure_rm.yml'
+        args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_bdlab08'
