@@ -36,7 +36,7 @@ stages:
           inventoriesRemoteMachine: 'hostList'
           inventoryHostListRemoteMachine: 'ansiblelab08.westus.cloudapp.azure.com'
 
-- stage: Role Mysql
+- stage: RoleMysql
   displayName: Role Mysql
   jobs:
   - job: InstallConfigbd
