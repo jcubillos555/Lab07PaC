@@ -52,9 +52,8 @@ stages:
       inputs:
         ansibleInterface: 'remoteMachine'
         connectionOverSsh: 'ansiblelab08'
-        playbookSourceRemoteMachine: 'agentMachine'
-        playbookRootRemoteMachine: 'InfraAnsible'
-        playbookPathLinkedArtifactOnRemoteMachine: 'mainbd.yml'
+        playbookSourceRemoteMachine: 'ansibleMachine'
+        playbookPathAnsibleMachineOnRemoteMachine: '/home/jcubilllos555/main3.yml'
         inventoriesRemoteMachine: 'file'
         inventoryFileSourceRemoteMachine: 'agentMachine'
         inventoryFileLinkedArtifactOnRemoteMachine: 'InfraAnsible/inventariowebazure_rm.yml'
