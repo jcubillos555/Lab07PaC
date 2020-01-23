@@ -60,7 +60,7 @@ stages:
 #        args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_bdlab08'
 
 - stage: RoleApache
-  displayName: Role Mysql
+  displayName: Role Apache
   jobs:
   - job: InstallConfigApache
     displayName: InstallConfigApache
