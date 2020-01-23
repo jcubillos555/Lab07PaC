@@ -29,8 +29,8 @@ stages:
       - task: Ansible@0
         inputs:
           ansibleInterface: 'remoteMachine'
-          connectionOverSsh: 'ansiblemaster'
+          connectionOverSsh: 'ansiblelab08'
           playbookSourceRemoteMachine: 'agentMachine'
           playbookRootRemoteMachine: 'InfraAnsible'
           playbookPathLinkedArtifactOnRemoteMachine: 'infra.yml'
-          inventoriesRemoteMachine: 'noInventory' 
+          inventoriesRemoteMachine: 'noInventory'
