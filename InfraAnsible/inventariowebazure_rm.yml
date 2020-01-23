@@ -1,8 +1,8 @@
   plugin: azure_rm
   include_vm_resource_groups:
-  - lab07
+  - lab08
   auth_source: auto
 
   keyed_groups:
-  - prefix: weblab07
+  - prefix: weblab08
     key: tags
