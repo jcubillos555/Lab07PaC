@@ -1,4 +1,4 @@
-#Deploy Infraestructura base
+#Deploy Infraestructura base Variables
 - hosts: localhost
   connection: local
   gather_facts: no
@@ -27,6 +27,7 @@
       locationlab07: __locationlab07__
       autenthicationmethod: __autenthicationmethod__
       llavepublicalab07: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOcUiCw6qYodwRT6FcabSr6BF+UJQ5WCvOz4v9wulxV2Z9aDmKBMTKM0537n2umdY3++gMLjOEEuG4RYhuH1rX5mdDQvm5FP+bkfrXBUHTntJk1C91/FOvL6LpLoqKf5eZ01hFPzm2F+SdGdRXTWhDLOfyGF/kQNwpE+wrPRCdfpRU0FORA/q49OvfugorYXcYvMnvByftDzZVxiBQ+3c7bQR13ZhizM7pPAgGmBivpPT27XPkBViSFDVAR7CD6KD1r1BalyEgRNadWNp/BBFo9dAZwWd6tBwPC6ONgoF5qyvbot6rNZ+mprldb4DL4ZGpT8YFpoV2c+aPI8jnreCj jcubillos555@ansiblelab07
+      #llavepublicalab07: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOcUiCw6qYodwRT6FcabSr6BF+UJQ5WCvOz4v9wulxV2Z9aDmKBMTKM0537n2umdY3++gMLjOEEuG4RYhuH1rX5mdDQvm5FP+bkfrXBUHTntJk1C91/FOvL6LpLoqKf5eZ01hFPzm2F+SdGdRXTWhDLOfyGF/kQNwpE+wrPRCdfpRU0FORA/q49OvfugorYXcYvMnvByftDzZVxiBQ+3c7bQR13ZhizM7pPAgGmBivpPT27XPkBViSFDVAR7CD6KD1r1BalyEgRNadWNp/BBFo9dAZwWd6tBwPC6ONgoF5qyvbot6rNZ+mprldb4DL4ZGpT8YFpoV2c+aPI8jnreCj jcubillos555@ansiblelab07
   tasks:
   - name: Create resource group
     azure_rm_resourcegroup:
