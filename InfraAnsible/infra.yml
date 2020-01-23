@@ -33,43 +33,43 @@
       name: "{{ rgr }}"
       location: "{{ locationlab07 }}"
 
-  - name: Deploy VM Ansible
-    azure_rm_deployment:
-      resource_group: "{{ rgr }}"
-      name: Deploylab08
-      parameters:
-        vmName:
-          value: "{{ vmnameansible }}"
-        adminUsername:
-          value: "{{ userlab07 }}"
-        authenticationType:
-          value: password
-        adminPasswordOrKey:
-          value: Proviteq.1999
-        ubuntuOSVersion:
-          value: "{{ skulab07 }}"
-        location:
-           value: "{{ locationlab07 }}"
-        vmSize:
-          value: "{{ sizevmlab07 }}"
-        virtualNetworkName:
-          value: "{{ virtualnetworklab07 }}"
-        subnetName:
-          value: "{{ subnetlab07 }}"   
-        networkSecurityGroupName:
-          value: "{{ nsglab07 }}" 
-        dnsLabelPrefix:
-          value: "{{ dnsansiblelab07 }}"
-      template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
-    register: azure
+#  - name: Deploy VM Ansible
+#    azure_rm_deployment:
+#      resource_group: "{{ rgr }}"
+#      name: Deploylab08
+#      parameters:
+#        vmName:
+#          value: "{{ vmnameansible }}"
+#        adminUsername:
+#          value: "{{ userlab07 }}"
+#        authenticationType:
+#          value: password
+#        adminPasswordOrKey:
+#          value: Proviteq.1999
+#        ubuntuOSVersion:
+#          value: "{{ skulab07 }}"
+#        location:
+#           value: "{{ locationlab07 }}"
+#        vmSize:
+#          value: "{{ sizevmlab07 }}"
+#        virtualNetworkName:
+#          value: "{{ virtualnetworklab07 }}"
+#        subnetName:
+#          value: "{{ subnetlab07 }}"   
+#        networkSecurityGroupName:
+#          value: "{{ nsglab07 }}" 
+#        dnsLabelPrefix:
+#          value: "{{ dnsansiblelab07 }}"
+#      template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
+#    register: azure
 
-  - name: Tags VM
-    azure_rm_virtualmachine:
-      resource_group: "{{ rgr }}"
-      name: "{{ vmnameansible }}"
-      append_tags: True
-      tags:
-        env: "{{ tagansiblelab07 }}" 
+#  - name: Tags VM
+#    azure_rm_virtualmachine:
+#      resource_group: "{{ rgr }}"
+#      name: "{{ vmnameansible }}"
+#      append_tags: True
+#      tags:
+#        env: "{{ tagansiblelab07 }}" 
 
   - name: VMExtension Install Ansible
     azure_rm_virtualmachineextension:
