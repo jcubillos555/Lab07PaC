@@ -48,7 +48,17 @@ stages:
         sourceFolder: 'Data'
         contents: 'users.sql'
         targetFolder: '/tmp'
-
+    - task: Ansible@0
+      inputs:
+        ansibleInterface: 'remoteMachine'
+        connectionOverSsh: 'ansiblelab08'
+        playbookSourceRemoteMachine: 'agentMachine'
+        playbookRootRemoteMachine: 'InfraAnsible'
+        playbookPathLinkedArtifactOnRemoteMachine: 'mainbd.yml'
+        inventoriesRemoteMachine: 'file'
+        inventoryFileSourceRemoteMachine: 'agentMachine'
+        inventoryFileLinkedArtifactOnRemoteMachine: 'InfraAnsible/inventariowebazure_rm.yml'
+        args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_weblab08'
 - stage: RoleApache
   displayName: Role Apache
   jobs:
@@ -76,5 +86,5 @@ stages:
         playbookPathLinkedArtifactOnRemoteMachine: 'mainweb.yml'
         inventoriesRemoteMachine: 'file'
         inventoryFileSourceRemoteMachine: 'agentMachine'
-        inventoryFileLinkedArtifactOnRemoteMachine: 'inventariowebazure_rm.yml'
+        inventoryFileLinkedArtifactOnRemoteMachine: 'InfraAnsible/inventariowebazure_rm.yml'
         args: '--ssh-extra-args ''-o "StrictHostKeyChecking no"'' --limit=weblab08_env_weblab08'
