@@ -1,5 +1,5 @@
 <?php
-$servername = "bdlab07";
+$servername = "bdlab08";
 $username = "jcubillos555";
 $password = "jcubillos555";
 $db_name = "crud_app";
